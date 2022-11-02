@@ -1,0 +1,16 @@
+span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.it {
+  font-style: italic;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+    object-fit: none;
+}
