@@ -1,0 +1,58 @@
+.head {
+  width: 90%;
+  display: flex;
+  margin: auto;
+  background-color: lightgray;
+  min-width: 970px;
+}
+
+.head img {
+  height: 150px;
+}
+
+nav {
+  margin: auto;
+  letter-spacing: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  min-width: 600px;
+}
+
+.sider_bar {
+  width: 30%;
+  background-color: lightgrey;
+  margin: 5px 5px 5px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+}
+
+.main {
+  width: 90%;
+  margin: 5px 0 5px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  min-width: 820px;
+}
+
+.footer {
+  text-align: center;
+  background-color: lightgray;
+  width: 90%;
+  margin: auto;
+  min-width: 970px;
+}
