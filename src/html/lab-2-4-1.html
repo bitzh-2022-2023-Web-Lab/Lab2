@@ -1,0 +1,149 @@
+<!--姓名：曾锦麟
+    班级：软工3班
+    实验名称：实验2-4-1
+    实验步骤： 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/2-4-1.css" />
+    <title>京东(JD.COM)</title>
+</head>
+
+<body>
+    <div class="head">
+        <div class="head_left">
+            <div class="location" onclick="funNotDesigned()">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+                    <path d="M16 18a5 5 0 1 1 5-5a5.006 5.006 0 0 1-5 5zm0-8a3 3 0 1 0 3 3a3.003 3.003 0 0 0-3-3z"
+                        fill="currentColor"></path>
+                    <path
+                        d="M16 30l-8.436-9.949a35.076 35.076 0 0 1-.348-.451A10.889 10.889 0 0 1 5 13a11 11 0 0 1 22 0a10.884 10.884 0 0 1-2.215 6.597l-.001.003s-.3.394-.345.447zM8.812 18.395c.002 0 .234.308.287.374L16 26.908l6.91-8.15c.044-.055.278-.365.279-.366A8.901 8.901 0 0 0 25 13a9 9 0 1 0-18 0a8.905 8.905 0 0 0 1.813 5.395z"
+                        fill="currentColor"></path>
+                </svg>
+                广东
+            </div>
+        </div>
+        <div class="head_right">
+            <div class="login"><a href="https://passport.jd.com/new/login.aspx">您好，请登录</a></div>
+            &nbsp;&nbsp;
+            <div class="regedit"><a href="https://reg.jd.com/reg/person">免费注册</a></div>&nbsp;&nbsp;|
+            &nbsp;&nbsp;
+            <div class="my_order" onclick="funNotDesigned()">我的订单</div>&nbsp;&nbsp;|
+            &nbsp;&nbsp;
+
+        </div>
+    </div>
+
+    <div class="function_Area">
+        <div class="left">
+            <img src="../../resource/pic/jd.jpg" alt="">
+        </div>
+        <div class="middle">
+            <div class="search">
+                <input type="text" class="search_square">
+                <div class="search_btn" onclick="funNotDesigned()">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 12 12">
+                        <g fill="none">
+                            <path
+                                d="M5 1a4 4 0 1 0 2.248 7.31l2.472 2.47a.75.75 0 1 0 1.06-1.06L8.31 7.248A4 4 0 0 0 5 1zM2.5 5a2.5 2.5 0 1 1 5 0a2.5 2.5 0 0 1-5 0z"
+                                fill="currentColor"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="search_hot">
+                <a href="" onclick="funNotDesigned()">家用电器</a>&nbsp;
+                <a href="" onclick="funNotDesigned()">健康好物</a>&nbsp;
+                <a href="" onclick="funNotDesigned()">家用电器</a>&nbsp;
+                <a href="" onclick="funNotDesigned()">手机</a>&nbsp;
+                <a href="" onclick="funNotDesigned()">电脑</a>&nbsp;
+                <a href="" onclick="funNotDesigned()">男装</a>&nbsp;
+                <a href="" onclick="funNotDesigned()">女装</a>&nbsp;
+                <a href="" onclick="funNotDesigned()">童装</a>&nbsp;
+                <a href="" onclick="funNotDesigned()">苹果</a>&nbsp;
+            </div>
+            <div class="nav"></div>
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="left">
+            <img src="../../resource/pic/wuping.jpg" alt="">
+        </div>
+        <div class="right">
+            <div class="title">商品名称</div>
+            <div class="introduction">商品介绍</div>
+            <br>
+            <div class="price">
+                京东价：￥<span class="price_red">8888.00</span>
+            </div>
+            <br>
+            <div class="locate">
+                配送至:
+                <select name="locate">
+                    <option value="noSelect">-请选择-</option>
+                    <option value="zhuhai">广东·珠海</option>
+                </select>
+                有货
+            </div>
+            <br>
+            <div class="num">
+                <div>数量：</div>
+                <div id="back" style="margin-right: 5px;cursor: pointer;" onclick="countNum(-1)">-</div>
+                <input type="text" id="number" style="width: 30px;text-align: center;" value="1">
+                <div id="pre" style="margin-left: 5px;cursor: pointer;" onclick="countNum(1)">+</div>
+            </div>
+            <div class="buy">
+                <div class="buy_car" onclick="buy(1)">加入购物车</div>
+                <div class="buy_btn" onclick="buy(2)">立即购买</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div>Copyrights 2022 JulienZeng© 仅供学习使用 中国珠海</div>
+    </div>
+
+
+    <script>
+        funNotDesigned = () => {
+            alert("该功能尚未实现")
+        }
+
+        buy = (e) => {
+            if (e === 1) {
+                alert("加入购物车成功")
+            } else {
+                funNotDesigned()
+            }
+        }
+
+        countNum = (e) => {
+            let dom = document.getElementById("number")
+            if (e === -1) {
+                if (dom.value == 0) {
+                    document.getElementById("back").style = `margin-right: 5px;cursor: pointer;color: lightgray`
+                } else {
+                    dom.value--
+                    if (dom.value == 0) {
+                        document.getElementById("back").style = `margin-right: 5px;cursor: pointer;color: lightgray`
+                    }
+                }
+            } else {
+                dom.value++
+            }
+        }
+    </script>
+</body>
+
+</html>
